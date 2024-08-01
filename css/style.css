@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:wght@700&family=Outfit:wght@700&display=swap');
+
+:root {
+    /* ---Primary Colors ---*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* ---- Neutral Colors ---- */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--cream);
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+.container {
+   padding: 28px 16px;
+   width: 100%;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 614px;
+    background-color: var(--white);
+    border-radius: 10px;
+    max-width: 380px;
+    margin: auto;
+}
+/* -----------photo of product------------ */
+.card_img {
+    height: 241px;
+}
+.card_img img {
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+}
+/* ------------- article of information of product-------- */
+.card_info {
+    margin: 24px;
+}
+.card_info span {
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.card_info h1 {
+    color: var(--very-dark-blue);
+    font-family: "Fraunces", serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+.card_info p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+.card_info h2 {
+    color: var(--dark-cyan);
+    font-family: "Fraunces", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.card_info h2 del {
+    color: var(--dark-grayish-blue);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 12px;
+}
+.card_info button {
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: 700;
+    margin: 18px 0 0 0;
+    padding: 18px;
+    width: 100%;
+}
+.card_info button span {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.card_info button:hover {
+    background-color: var(--very-dark-blue);
+    color: white;
+    cursor: pointer;
+}
+/* ------------------(>1440px)---------------- */
+@media only screen and (min-width: 1440px) {
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+    .card {
+        flex-direction: row;
+        height: 452px;
+        max-width: 605px;
+    }
+    .card_img {
+        height: 100%;
+    }
+    .card_img img {
+        border-radius: 10px 0 0 10px;
+        width: 300px;
+    }
+    .card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+/* ----------Footer------------------- */
+.attribution { font-size: 1.6rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
