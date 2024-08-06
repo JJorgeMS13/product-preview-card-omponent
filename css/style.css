@@ -25,7 +25,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-
 }
 .container {
    padding: 28px 16px;
@@ -35,13 +34,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 614px;
+    height: 612px;
     background-color: var(--white);
     border-radius: 10px;
     max-width: 380px;
     margin: auto;
 }
 /* -----------photo of product------------ */
+.img__large {
+    display: none;
+}
 .card_img {
     height: 241px;
 }
@@ -105,7 +107,7 @@ body {
     cursor: pointer;
 }
 /* ------------------(>1440px)---------------- */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 90rem) {
     .container {
         display: flex;
         height: 100vh;
@@ -121,6 +123,12 @@ body {
     .card_img img {
         border-radius: 10px 0 0 10px;
         width: 300px;
+    }
+    .img__large {
+        display: block;
+    }
+    .img__small {
+        display: none;
     }
     .card_info {
         display: flex;
